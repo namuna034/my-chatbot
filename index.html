@@ -144,8 +144,7 @@
 </div>
 
 <script>
-// Yahan apni Google AI Studio ki free API Key daalein
-const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY";
+const GEMINI_API_KEY = "AQ.Ab8RN6JzhbDDxV7Cz8RAx16tCSLcSOVR92V8OZ9nzp_Dowmvfg";
 
 let history = [];
 const chatEl = document.getElementById('chat');
@@ -172,11 +171,6 @@ inputBox.addEventListener('input', autoResize);
 async function sendMessage() {
   const text = inputBox.value.trim();
   if (!text) return;
-
-  if (GEMINI_API_KEY === "YOUR_GEMINI_API_KEY") {
-    addBubble('assistant', 'Kripya code me apni Gemini API Key add karein.');
-    return;
-  }
 
   addBubble('user', text);
   history.push({ role: 'user', parts: [{ text: text }] });
